@@ -1,0 +1,11 @@
+{
+    "name": "bahr/api",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "controllers\\" : "controllers/",
+            "factories\\" : "factories/",
+            "models\\" : "models/"
+        }
+    }
+}
