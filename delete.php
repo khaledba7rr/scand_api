@@ -11,16 +11,9 @@ header("Access-Control-Allow-Methods: *");
 
 $controller = new ProductsController();
 
-$method = $_SERVER['REQUEST_METHOD'];
 
-if($method == "POST"){
+$SKUs  = (array) json_decode(file_get_contents('php://input'));
 
-    echo $controller->addProduct($_POST);
-
-}
-else if ($method == "GET")
-{
-    echo  $controller->getProducts();
-}
+echo $controller->deleteProducts($SKUs);
 
 
